@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>323 a tu estilo | Ropa y accesorios personalizados</title>
+    <meta name="description" content="323 a tu estilo: camisetas basic, oversize, busos de alto gramaje, estuches de celular y stickers con diseño minimalista, urbano y premium.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#inicio" class="logo" onclick="limpiarBusqueda()">
+            <span>323</span> a tu estilo
+        </a>
+
+        <nav class="menu">
+            <a href="#inicio" onclick="limpiarBusqueda()">Inicio</a>
+            <a href="#camisetas" onclick="limpiarBusqueda()">Camisetas</a>
+            <a href="#busos" onclick="limpiarBusqueda()">Busos</a>
+            <a href="#estuches" onclick="limpiarBusqueda()">Estuches</a>
+            <a href="#stickers" onclick="limpiarBusqueda()">Stickers</a>
+            <a href="#nosotros" onclick="limpiarBusqueda()">Nosotros</a>
+            <a href="#contacto" onclick="limpiarBusqueda()">Contáctanos</a>
+        </nav>
+
+        <div class="acciones-header">
+            <div class="buscador">
+                <input 
+                    type="text" 
+                    id="inputBusqueda" 
+                    placeholder="Buscar..."
+                    aria-label="Buscar productos"
+                >
+                <button type="button" onclick="buscarProducto()" aria-label="Buscar">
+                    🔍
+                </button>
+            </div>
+
+            <div class="carrito">
+                🛒 <span id="contadorCarrito">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <p>Nueva colección</p>
+                <h1>Tu estilo,<br>a otro nivel</h1>
+                <span>
+                    Prendas premium, minimalistas y urbanas para quienes buscan verse diferentes sin exagerar.
+                </span>
+                <a href="#camisetas" class="boton-principal">Ver colección</a>
+            </div>
+
+            <div class="hero-imagen">
+                <div class="foto-principal">
+                    <p>Imagen principal 323</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTADO DE BÚSQUEDA -->
+        <section class="resultado-busqueda" id="resultadoBusqueda">
+            <p id="textoResultado"></p>
+            <button type="button" onclick="limpiarBusqueda()">Limpiar búsqueda</button>
+        </section>
+
+        <!-- CATEGORÍAS DESTACADAS -->
+        <section class="categorias-destacadas">
+            <a href="#camisetas" class="categoria-card">
+                <h2>Camisetas</h2>
+                <p>Basic y oversize de alto gramaje.</p>
+            </a>
+
+            <a href="#busos" class="categoria-card">
+                <h2>Busos</h2>
+                <p>Comodidad, peso y presencia premium.</p>
+            </a>
+
+            <a href="#estuches" class="categoria-card">
+                <h2>Estuches</h2>
+                <p>Protección con diseño personalizado.</p>
+            </a>
+
+            <a href="#stickers" class="categoria-card">
+                <h2>Stickers</h2>
+                <p>Detalles que completan tu estilo.</p>
+            </a>
+        </section>
+
+        <!-- CAMISETAS -->
+        <section class="categoria-productos" id="camisetas">
+            <div class="titulo-seccion">
+                <p>Categoría</p>
+                <h2>Camisetas</h2>
+            </div>
+
+            <div class="grid-productos">
+
+                <article class="producto" data-nombre="camiseta basic premium 220 gramos tela importada">
+                    <div class="producto-imagen fondo-camiseta">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Camiseta Basic Premium</h3>
+                            <p>220 g · Tela importada · Corte clásico</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="camiseta oversize alto gramaje 320 gramos">
+                    <div class="producto-imagen fondo-oversize">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Camiseta Oversize</h3>
+                            <p>320 g · Silueta amplia · Estilo urbano</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="camiseta negra minimalista 323">
+                    <div class="producto-imagen fondo-negro">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Camiseta Negra Minimal</h3>
+                            <p>Diseño limpio · Fácil de combinar</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- BUSOS -->
+        <section class="categoria-productos" id="busos">
+            <div class="titulo-seccion">
+                <p>Categoría</p>
+                <h2>Busos</h2>
+            </div>
+
+            <div class="grid-productos">
+
+                <article class="producto" data-nombre="buso premium alto gramaje 350 gramos">
+                    <div class="producto-imagen fondo-buso">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Buso Premium</h3>
+                            <p>350 g · Alto gramaje · Tela importada</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="hoodie oversize urbano minimalista">
+                    <div class="producto-imagen fondo-hoodie">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Hoodie Oversize</h3>
+                            <p>Comodidad · Presencia · Calidad</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="buso negro focus personalizado">
+                    <div class="producto-imagen fondo-focus">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Buso Focus</h3>
+                            <p>Diseño sobrio · Estética 323</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ESTUCHES -->
+        <section class="categoria-productos" id="estuches">
+            <div class="titulo-seccion">
+                <p>Categoría</p>
+                <h2>Estuches</h2>
+            </div>
+
+            <div class="grid-productos">
+
+                <article class="producto" data-nombre="estuche transparente con stickers personalizado">
+                    <div class="producto-imagen fondo-estuche">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Estuche Transparente</h3>
+                            <p>Personalizable · Limpio · Moderno</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="estuche iphone personalizado">
+                    <div class="producto-imagen fondo-iphone">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Estuche iPhone</h3>
+                            <p>Diseño premium para tu celular</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="estuche samsung personalizado">
+                    <div class="producto-imagen fondo-samsung">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Estuche Samsung</h3>
+                            <p>Protección + estilo personalizado</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- STICKERS -->
+        <section class="categoria-productos" id="stickers">
+            <div class="titulo-seccion">
+                <p>Categoría</p>
+                <h2>Stickers</h2>
+            </div>
+
+            <div class="grid-productos">
+
+                <article class="producto" data-nombre="stickers urbanos minimalistas">
+                    <div class="producto-imagen fondo-stickers">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Pack Urbano</h3>
+                            <p>Minimalista · Exclusivo · Diferente</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="stickers frases premium">
+                    <div class="producto-imagen fondo-frases">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Pack Frases</h3>
+                            <p>Mensajes con estilo 323</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="stickers personalizados nombre diseño">
+                    <div class="producto-imagen fondo-personalizados">
+                        <span>Foto</span>
+                    </div>
+                    <div class="producto-info">
+                        <div>
+                            <h3>Stickers Personalizados</h3>
+                            <p>Creados a tu estilo</p>
+                        </div>
+                        <button class="btn-agregar" type="button">+</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros-imagen">
+                <span>323</span>
+            </div>
+
+            <div class="nosotros-texto">
+                <p>Sobre nosotros</p>
+                <h2>No es solo ropa. Es una forma de decir quién eres.</h2>
+                <span>
+                    En 323 a tu estilo creamos prendas y accesorios con una estética urbana, minimalista y premium.
+                    Diseñamos camisetas basic, oversize, busos de alto gramaje, estuches de celular y stickers para
+                    personas que buscan algo diferente, cómodo y con personalidad.
+                </span>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="beneficios">
+            <article>
+                <h3>Alto gramaje</h3>
+                <p>Telas con mejor caída, más cuerpo y sensación premium.</p>
+            </article>
+
+            <article>
+                <h3>Diseño minimalista</h3>
+                <p>Prendas limpias, urbanas y fáciles de combinar.</p>
+            </article>
+
+            <article>
+                <h3>Personalización</h3>
+                <p>Cada pieza puede adaptarse a tu estilo sin perder elegancia.</p>
+            </article>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto" id="contacto">
+            <p>Compra directa</p>
+            <h2>¿Quieres hacer tu pedido?</h2>
+            <span>
+                Escríbenos por WhatsApp y arma tu estilo con prendas y accesorios 323.
+            </span>
+
+            <a href="https://wa.me/573000000000" target="_blank" class="boton-whatsapp">
+                Comprar por WhatsApp
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 323 a tu estilo. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JAVASCRIPT FUNCIONAL -->
+    <script>
+        const inputBusqueda = document.getElementById("inputBusqueda");
+        const productos = document.querySelectorAll(".producto");
+        const secciones = document.querySelectorAll(".categoria-productos");
+        const resultadoBusqueda = document.getElementById("resultadoBusqueda");
+        const textoResultado = document.getElementById("textoResultado");
+        const contadorCarrito = document.getElementById("contadorCarrito");
+        const botonesAgregar = document.querySelectorAll(".btn-agregar");
+
+        let carrito = Number(localStorage.getItem("carrito323")) || 0;
+        contadorCarrito.textContent = carrito;
+
+        botonesAgregar.forEach(function(boton) {
+            boton.addEventListener("click", function() {
+                carrito++;
+                localStorage.setItem("carrito323", carrito);
+                contadorCarrito.textContent = carrito;
+
+                boton.textContent = "✓";
+
+                setTimeout(function() {
+                    boton.textContent = "+";
+                }, 900);
+            });
+        });
+
+        function normalizarTexto(texto) {
+            return texto
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+        }
+
+        function buscarProducto() {
+            const busqueda = normalizarTexto(inputBusqueda.value.trim());
+            let productosEncontrados = 0;
+
+            productos.forEach(function(producto) {
+                const nombreProducto = normalizarTexto(producto.dataset.nombre + " " + producto.textContent);
+
+                if (nombreProducto.includes(busqueda)) {
+                    producto.style.display = "block";
+                    productosEncontrados++;
+                } else {
+                    producto.style.display = "none";
+                }
+            });
+
+            secciones.forEach(function(seccion) {
+                const productosVisibles = seccion.querySelectorAll('.producto[style*="block"]').length;
+                const productosTotales = seccion.querySelectorAll(".producto").length;
+
+                if (busqueda === "") {
+                    seccion.style.display = "block";
+                } else if (productosVisibles > 0 || productosTotales === productosVisibles) {
+                    seccion.style.display = "block";
+                } else {
+                    seccion.style.display = "none";
+                }
+            });
+
+            if (busqueda === "") {
+                resultadoBusqueda.style.display = "none";
+                productos.forEach(function(producto) {
+                    producto.style.display = "block";
+                });
+                secciones.forEach(function(seccion) {
+                    seccion.style.display = "block";
+                });
+            } else {
+                resultadoBusqueda.style.display = "flex";
+
+                if (productosEncontrados === 0) {
+                    textoResultado.textContent = "No encontramos productos relacionados con: " + inputBusqueda.value;
+                } else {
+                    textoResultado.textContent = "Resultados encontrados: " + productosEncontrados;
+                }
+            }
+        }
+
+        function limpiarBusqueda() {
+            inputBusqueda.value = "";
+            resultadoBusqueda.style.display = "none";
+
+            productos.forEach(function(producto) {
+                producto.style.display = "block";
+            });
+
+            secciones.forEach(function(seccion) {
+                seccion.style.display = "block";
+            });
+        }
+
+        inputBusqueda.addEventListener("input", buscarProducto);
+
+        inputBusqueda.addEventListener("keydown", function(evento) {
+            if (evento.key === "Enter") {
+                buscarProducto();
+
+                const primerProductoVisible = document.querySelector('.producto[style*="block"]');
+
+                if (primerProductoVisible) {
+                    primerProductoVisible.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
